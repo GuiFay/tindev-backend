@@ -9,7 +9,7 @@ module.exports = {
 
         const loggedDev = await Dev.findById(user)
 
-        const user = await Dev.find({
+        const users = await Dev.find({
             $and: [
                 { _id: { $ne: user } },
                 { _id: { $nin: loggedDev.likes } },
